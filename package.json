@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.17.2",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
     "@t3-oss/env-nextjs": "^0.2.1",

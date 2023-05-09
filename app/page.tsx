@@ -2,7 +2,8 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link';
-import Logo from "./Logo";
+import Logo from "./(assets)/Logo";
+import { UserButton } from "@clerk/nextjs";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
                     <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
                       <span>Just shipped v0.1.0</span>
                       <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                      
                     </span>
                   </a>
                 </div>
@@ -38,6 +40,7 @@ const Home: NextPage = () => {
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                 Our customizable Digital Signage solution offers the flexibility to deploy on any Single Board Computer, with a range of pre-designed templates to choose from.
                 </p>
+                <UserButton />
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
                     href="/login"
@@ -45,9 +48,10 @@ const Home: NextPage = () => {
                   >
                     Login
                   </Link>
-                  <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                    View on GitHub <span aria-hidden="true">→</span>
-                  </a>
+                  <Link href="/signup" className="text-sm font-semibold leading-6 text-gray-900">
+                  Sign-Up <span aria-hidden="true">→</span>
+                  </Link>
+                   
                 </div>
               </div>
             </div>
